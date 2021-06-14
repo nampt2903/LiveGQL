@@ -50,7 +50,7 @@ open class LiveGQL {
                     self.verbosePrint("Ping by server.")
                 case MessageTypes.GQL_DATA.rawValue:
                     self.delegate?.receivedRawMessage(text: message)
-                //self.delegate?.receiveDictMessage!(dict: dict)
+                    self.delegate?.receiveDictMessage?(dict: json)
                 case MessageTypes.GQL_ERROR.rawValue:
                     print("LiveGQL: Error return")
                     print(message)
