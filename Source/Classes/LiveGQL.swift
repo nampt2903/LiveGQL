@@ -23,7 +23,7 @@ open class LiveGQL {
     };
     
     public required init(socket url: String) {
-        self.socket = WebSocket(url: URL(string: url)!, protocols: ["graphql-ws"])
+        self.socket = WebSocket(url: URL(string: url)!, protocols: ["graphql-subscription"])
         self.socket.delegate = self
         self.socket.connect()
     }
