@@ -15,5 +15,5 @@ Pod::Spec.new do |s|
   s.ios.deployment_target  = '9.0'
   s.tvos.deployment_target  = '9.0'
   s.exclude_files = "Classes/Exclude"
-  s.dependency "Starscream", "~> 2.0.3"
+  s.dependency "Starscream", :git => 'https://github.com/PayME-Tech/Starscream.git', :branch => 'payme'
 end
