@@ -75,8 +75,8 @@ open class LiveGQL: NSObject {
                 case MessageTypes.GQL_CONNECTION_KEEP_ALIVE.rawValue:
                     verbosePrint("Ping by server.")
                 case MessageTypes.GQL_DATA.rawValue:
-                    delegate?.receivedRawMessage(text: message)
-                // self.delegate?.receiveDictMessage!(dict: dict)
+                    self.delegate?.receivedRawMessage(text: message)
+                    self.delegate?.receiveDictMessage?(dict: json)
                 case MessageTypes.GQL_ERROR.rawValue:
                     print("LiveGQL: Error return")
                     print(message)
