@@ -42,7 +42,7 @@ class ViewController: UIViewController {
 
 extension ViewController: LiveGQLDelegate {
     func receivedMessage(text: String) {
-        print("Received Message: \(text)")
+        print("Received Message : \(text)")
     }
 }
 
